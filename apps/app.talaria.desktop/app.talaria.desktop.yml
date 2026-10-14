@@ -16,7 +16,20 @@ finish-args:
   - --socket=wayland
   - --socket=fallback-x11
   - --device=dri # WebKit composites on the GPU wherever it can
+  # The sandbox's render node is not the host driver's: WebKit's DMABUF
+  # renderer dies on a Wayland protocol error before a window exists, and a
+  # .desktop launch is silent. desktop-v0.10.0's binary sets this itself when
+  # FLATPAK_ID is present, and upstream's own manifest carries the same line;
+  # keeping it here means a rebuild of an older tag is not silently broken.
+  - --env=WEBKIT_DISABLE_DMABUF_RENDERER=1
   - --talk-name=org.freedesktop.portal.* # browser-based OAuth, when it lands
+  # desktop-v0.10.0 posts OS notifications from the shell through notify-rust
+  # 4.18, which speaks the legacy org.freedesktop.Notifications interface
+  # directly — it has no portal path, so without this the show() call fails
+  # inside the sandbox and no banner ever appears. Upstream's own manifest
+  # does not grant it yet (outcrop-labs/talaria, desktop/packaging/flatpak);
+  # this is the one place this submission deliberately differs from it.
+  - --talk-name=org.freedesktop.Notifications
 
 # No sdk-extensions, deliberately: rust-stable and node are date-versioned
 # fd extensions with no //50 branch, and the runner's flatpak 1.14 cannot
@@ -38,8 +51,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/outcrop-labs/talaria
-        tag: desktop-v0.6.0
-        commit: cd379c9261afc5726d24ecbfd0c6e7fa7c6c3f15
+        tag: desktop-v0.10.0
+        commit: 6700fec27e7cf39eecbdc9d99a325c5faeead541
       # rust 1.97.1: desktop/src-tauri/rust-toolchain.toml pins it (edition
       # 2024 + the tauri `unstable` multiwebview feature). Self-contained
       # dist tarball; the wrapper dir is auto-stripped on extract.

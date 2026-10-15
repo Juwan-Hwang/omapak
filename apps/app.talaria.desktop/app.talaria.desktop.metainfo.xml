@@ -42,6 +42,19 @@
   </keywords>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="0.10.0" date="2026-10-08">
+      <description>
+        <p>
+          Desktop notifications posted by the shell itself, with a click that
+          opens the workspace path they came from, and two fixes that matter
+          most inside a Flatpak: WebKit's DMABUF renderer no longer aborts on
+          a Wayland protocol error before the first frame, and the launcher no
+          longer stays 1x1 and off-screen when the first resize beats the
+          shell state. Either one made a desktop launch look like nothing had
+          started.
+        </p>
+      </description>
+    </release>
     <release version="0.6.0" date="2026-09-22">
       <description>
         <p>

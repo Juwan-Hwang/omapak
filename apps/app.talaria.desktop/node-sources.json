@@ -1,6 +1,24 @@
 [
  {
   "type": "archive",
+  "url": "https://registry.npmjs.org/@emnapi/core/-/core-1.11.3.tgz",
+  "sha512": "ccba52e5ab2311bee5abc8d82eadfb37a5ca684e350c87b1958d6b17fcf8fed225df0a35dd2aa6dbc7d1c9f22c2990fe359f263394682a4a56feb05cba84994a",
+  "dest": "bun_cache/@emnapi/core@1.11.3@@@1"
+ },
+ {
+  "type": "archive",
+  "url": "https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.11.3.tgz",
+  "sha512": "5f3e13a72922ed7caba5b50ad6347502174075a5f2861638959de778ba1d9a1a6e59fcb63c040de41e3ab00894e2588e5c62e41f2a67fea53e8ef7d64826182c",
+  "dest": "bun_cache/@emnapi/runtime@1.11.3@@@1"
+ },
+ {
+  "type": "archive",
+  "url": "https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.2.3.tgz",
+  "sha512": "10b1017bc3ec2efbc9e9032bd332edf1f7ef3875bf75cd66dc213334c83b68952fddb31aa03b70d935f20c0c24601baba31c6e1c4c214532c949ee6cc9ae78ee",
+  "dest": "bun_cache/@emnapi/wasi-threads@1.2.3@@@1"
+ },
+ {
+  "type": "archive",
   "url": "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.28.2.tgz",
   "sha512": "e314d9af5154992a105b85c85a68addedcd0ad44d933e3773f45d5f3144e298179d177c8ef178ef74fb56d9bcdc3122e7d0f610d0551247e588603d517c03f1d",
   "dest": "bun_cache/@esbuild/linux-x64@0.28.2@@@1"
@@ -43,6 +61,12 @@
  },
  {
   "type": "archive",
+  "url": "https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-1.2.4.tgz",
+  "sha512": "009c68503dbfd791121dbbe97328d4dbbe27b003cbb8eb4f1c2934bca24ce698fffc583f0751573568cf9d74d3f4fca60986221e8e333e3d19a265c12a1a32ee",
+  "dest": "bun_cache/@napi-rs/wasm-runtime@1.2.4@@@1"
+ },
+ {
+  "type": "archive",
   "url": "https://registry.npmjs.org/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.63.3.tgz",
   "sha512": "4976a04709c8d96970962b6596ee7d50afe71956c3d4228f70da83a651f0202e01a897295c58c3df677547f45bb8849af791dd42b64cdffeefe1b2a2a3015a2c",
   "dest": "bun_cache/@rollup/rollup-linux-x64-gnu@4.63.3@@@1"
@@ -67,27 +91,21 @@
  },
  {
   "type": "archive",
-  "url": "https://registry.npmjs.org/@sveltejs/vite-plugin-svelte/-/vite-plugin-svelte-6.2.4.tgz",
-  "sha512": "a2efdde75412753c8ddba0fb87a752a6eb0029a66402218ce79fc02988bef40199c3babce611256e32b7904cb35c784b4a7448487398cd581eeb1d23459ec35c",
-  "dest": "bun_cache/@sveltejs/vite-plugin-svelte@6.2.4@@@1"
- },
- {
-  "type": "archive",
   "url": "https://registry.npmjs.org/@sveltejs/vite-plugin-svelte-inspector/-/vite-plugin-svelte-inspector-5.0.2.tgz",
   "sha512": "4d9cd14dc12d65f7c809202864690f4a5e84b6c8f6b68ace56bc7a530d0aa57c6b79cf4683a8c5590eb4437f8b98d19f652c4744264beef5d56485a6b95e7422",
   "dest": "bun_cache/@sveltejs/vite-plugin-svelte-inspector@5.0.2@@@1"
  },
  {
   "type": "archive",
-  "url": "https://registry.npmjs.org/@tailwindcss/node/-/node-4.3.3.tgz",
-  "sha512": "fd3f08284b1ff554d4ead2e3802efeb2fda638fb50c731368ccc3bbb84ede344f1f90499c69ce1f79fc7e9c30aa236bd5ee5bb88c74b258041d28f46d4268082",
-  "dest": "bun_cache/@tailwindcss/node@4.3.3@@@1"
+  "url": "https://registry.npmjs.org/@sveltejs/vite-plugin-svelte/-/vite-plugin-svelte-6.2.4.tgz",
+  "sha512": "a2efdde75412753c8ddba0fb87a752a6eb0029a66402218ce79fc02988bef40199c3babce611256e32b7904cb35c784b4a7448487398cd581eeb1d23459ec35c",
+  "dest": "bun_cache/@sveltejs/vite-plugin-svelte@6.2.4@@@1"
  },
  {
   "type": "archive",
-  "url": "https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.3.3.tgz",
-  "sha512": "92b5e302292268548f68afc5900413e544f1dd5a2b9906a2679841165259f54150181febc20d4c648847006f6c98c4114ddc89c4fe90b7933032d772539156ac",
-  "dest": "bun_cache/@tailwindcss/oxide@4.3.3@@@1"
+  "url": "https://registry.npmjs.org/@tailwindcss/node/-/node-4.3.3.tgz",
+  "sha512": "fd3f08284b1ff554d4ead2e3802efeb2fda638fb50c731368ccc3bbb84ede344f1f90499c69ce1f79fc7e9c30aa236bd5ee5bb88c74b258041d28f46d4268082",
+  "dest": "bun_cache/@tailwindcss/node@4.3.3@@@1"
  },
  {
   "type": "archive",
@@ -103,6 +121,12 @@
  },
  {
   "type": "archive",
+  "url": "https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.3.3.tgz",
+  "sha512": "92b5e302292268548f68afc5900413e544f1dd5a2b9906a2679841165259f54150181febc20d4c648847006f6c98c4114ddc89c4fe90b7933032d772539156ac",
+  "dest": "bun_cache/@tailwindcss/oxide@4.3.3@@@1"
+ },
+ {
+  "type": "archive",
   "url": "https://registry.npmjs.org/@tailwindcss/vite/-/vite-4.3.3.tgz",
   "sha512": "c9853c72880b79287f9acda387c163ee369b6bf1166bb25ae86a14a9865aada12e088e584ba9ace8e6d98238de766fa39ba5d98dd351581a4f3fa67cea83b173",
   "dest": "bun_cache/@tailwindcss/vite@4.3.3@@@1"
@@ -115,12 +139,6 @@
  },
  {
   "type": "archive",
-  "url": "https://registry.npmjs.org/@tauri-apps/cli/-/cli-2.11.4.tgz",
-  "sha512": "47cc46b4ca70c9eb5ac12aa6f6460eb8c984aa48546ef714cbc9f468d5c8c689652812c4494bb97f8171fbae218004989b51fe8d25aaea3096eb3a939c7ea1a9",
-  "dest": "bun_cache/@tauri-apps/cli@2.11.4@@@1"
- },
- {
-  "type": "archive",
   "url": "https://registry.npmjs.org/@tauri-apps/cli-linux-x64-gnu/-/cli-linux-x64-gnu-2.11.4.tgz",
   "sha512": "d9544d5a5f3814e1f49b682288390eda1d105e570c25e5fecc90e9239903210031eacfa0785defe3c1780d77c97b3e064bf15da031a73e7c350b689819b43b6d",
   "dest": "bun_cache/@tauri-apps/cli-linux-x64-gnu@2.11.4@@@1"
@@ -130,6 +148,18 @@
   "url": "https://registry.npmjs.org/@tauri-apps/cli-linux-x64-musl/-/cli-linux-x64-musl-2.11.4.tgz",
   "sha512": "a3d1b2858a2bfe773bc5aae6c0313791adaccee5b7bae6735e31d687ae10f185f902d4a0c5d424156ceb6383bc2a21ad54dbc5048d781f7438f508f94ce20ffc",
   "dest": "bun_cache/@tauri-apps/cli-linux-x64-musl@2.11.4@@@1"
+ },
+ {
+  "type": "archive",
+  "url": "https://registry.npmjs.org/@tauri-apps/cli/-/cli-2.11.4.tgz",
+  "sha512": "47cc46b4ca70c9eb5ac12aa6f6460eb8c984aa48546ef714cbc9f468d5c8c689652812c4494bb97f8171fbae218004989b51fe8d25aaea3096eb3a939c7ea1a9",
+  "dest": "bun_cache/@tauri-apps/cli@2.11.4@@@1"
+ },
+ {
+  "type": "archive",
+  "url": "https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.4.tgz",
+  "sha512": "5b77388118a0152d13fcc6b8a88605dc60c07390107476f5c8be739c94f566fd58683f4a8adc7ae7ac018efaf5f6a6e2a2c9994fc9560cce4110cca752a5fae4",
+  "dest": "bun_cache/@tybys/wasm-util@0.10.4@@@1"
  },
  {
   "type": "archive",
@@ -241,12 +271,6 @@
  },
  {
   "type": "archive",
-  "url": "https://registry.npmjs.org/lightningcss/-/lightningcss-1.32.0.tgz",
-  "sha512": "357601ce29cdadb95fada3c6cab6cfa03d7d0b587d95f23fd66ce0598bd75137b8d781b3fd7d450f65c165264ceeb453acc03c24bdceb4068689fac82a1439c9",
-  "dest": "bun_cache/lightningcss@1.32.0@@@1"
- },
- {
-  "type": "archive",
   "url": "https://registry.npmjs.org/lightningcss-linux-x64-gnu/-/lightningcss-linux-x64-gnu-1.32.0.tgz",
   "sha512": "57b42be7622166674a3d5afe56dc3ca3e58bb1025809377c96821fa4368c45619465f04e60425ec89224a862033193f03f1db8a5431fc12c7123ca61aff31b38",
   "dest": "bun_cache/lightningcss-linux-x64-gnu@1.32.0@@@1"
@@ -256,6 +280,12 @@
   "url": "https://registry.npmjs.org/lightningcss-linux-x64-musl/-/lightningcss-linux-x64-musl-1.32.0.tgz",
   "sha512": "6d870ba7e55bd1ac2c89783ff34b8245ecc2607360d7f9779add20cc79d657d5cfd56e6c29ae7f4c274659a47fcc13363de17f1dbb10bff8f651134e895bb15a",
   "dest": "bun_cache/lightningcss-linux-x64-musl@1.32.0@@@1"
+ },
+ {
+  "type": "archive",
+  "url": "https://registry.npmjs.org/lightningcss/-/lightningcss-1.32.0.tgz",
+  "sha512": "357601ce29cdadb95fada3c6cab6cfa03d7d0b587d95f23fd66ce0598bd75137b8d781b3fd7d450f65c165264ceeb453acc03c24bdceb4068689fac82a1439c9",
+  "dest": "bun_cache/lightningcss@1.32.0@@@1"
  },
  {
   "type": "archive",
@@ -331,15 +361,15 @@
  },
  {
   "type": "archive",
-  "url": "https://registry.npmjs.org/svelte/-/svelte-5.57.0.tgz",
-  "sha512": "35d6c39fb7e5e1b7b5562506d28abf96f1ba399cb7a04368955d8e3638aaaac7d5a1e01fcda4002947045f732b42877f05e6efd4f830113f6b7d78609fdb382a",
-  "dest": "bun_cache/svelte@5.57.0@@@1"
- },
- {
-  "type": "archive",
   "url": "https://registry.npmjs.org/svelte-check/-/svelte-check-4.7.6.tgz",
   "sha512": "b76b1c33ffd9b956d263f4f6c3a152070d6ff6cd8d12687f83eb32d65aada2c5b9ca5055e40178c056f54ecf4a7f731b7cf0d40c90d9f4be37e984f448f4ddbf",
   "dest": "bun_cache/svelte-check@4.7.6@@@1"
+ },
+ {
+  "type": "archive",
+  "url": "https://registry.npmjs.org/svelte/-/svelte-5.57.0.tgz",
+  "sha512": "35d6c39fb7e5e1b7b5562506d28abf96f1ba399cb7a04368955d8e3638aaaac7d5a1e01fcda4002947045f732b42877f05e6efd4f830113f6b7d78609fdb382a",
+  "dest": "bun_cache/svelte@5.57.0@@@1"
  },
  {
   "type": "archive",
@@ -358,6 +388,12 @@
   "url": "https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.17.tgz",
   "sha512": "c1747f758a5ca8a99f5a911d66388a24ec023459dd0f40cc9eb5bf7188d51adb449017d581c2c51e836b963e3b9a339589cf72c8dbbae5a96c805e0d4324dada",
   "dest": "bun_cache/tinyglobby@0.2.17@@@1"
+ },
+ {
+  "type": "archive",
+  "url": "https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz",
+  "sha512": "a0916ef781d06fe29576e49440bef09e99aa9df98bb0e03f9c087a6fa107d30084a0ad3f98f79753a737c0a0d5f373243ae1cf447b525ca294f7d2016b34bfdb",
+  "dest": "bun_cache/tslib@2.8.1@@@1"
  },
  {
   "type": "archive",
@@ -388,41 +424,5 @@
   "url": "https://registry.npmjs.org/zimmerframe/-/zimmerframe-1.1.5.tgz",
   "sha512": "9ac27122f60361ca0d2fe3c9b2efbbaa6a435ac6260314d8fb64cd6175c5d21cc1cc193404c79c3aa0ce1bf11c914a0a0ae2b039b7dbba0225f10a6a1c35de14",
   "dest": "bun_cache/zimmerframe@1.1.5@@@1"
- },
- {
-  "type": "archive",
-  "url": "https://registry.npmjs.org/@emnapi/core/-/core-1.11.3.tgz",
-  "sha512": "ccba52e5ab2311bee5abc8d82eadfb37a5ca684e350c87b1958d6b17fcf8fed225df0a35dd2aa6dbc7d1c9f22c2990fe359f263394682a4a56feb05cba84994a",
-  "dest": "bun_cache/@emnapi/core@1.11.3@@@1"
- },
- {
-  "type": "archive",
-  "url": "https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.11.3.tgz",
-  "sha512": "5f3e13a72922ed7caba5b50ad6347502174075a5f2861638959de778ba1d9a1a6e59fcb63c040de41e3ab00894e2588e5c62e41f2a67fea53e8ef7d64826182c",
-  "dest": "bun_cache/@emnapi/runtime@1.11.3@@@1"
- },
- {
-  "type": "archive",
-  "url": "https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.2.3.tgz",
-  "sha512": "10b1017bc3ec2efbc9e9032bd332edf1f7ef3875bf75cd66dc213334c83b68952fddb31aa03b70d935f20c0c24601baba31c6e1c4c214532c949ee6cc9ae78ee",
-  "dest": "bun_cache/@emnapi/wasi-threads@1.2.3@@@1"
- },
- {
-  "type": "archive",
-  "url": "https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-1.2.4.tgz",
-  "sha512": "009c68503dbfd791121dbbe97328d4dbbe27b003cbb8eb4f1c2934bca24ce698fffc583f0751573568cf9d74d3f4fca60986221e8e333e3d19a265c12a1a32ee",
-  "dest": "bun_cache/@napi-rs/wasm-runtime@1.2.4@@@1"
- },
- {
-  "type": "archive",
-  "url": "https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.4.tgz",
-  "sha512": "5b77388118a0152d13fcc6b8a88605dc60c07390107476f5c8be739c94f566fd58683f4a8adc7ae7ac018efaf5f6a6e2a2c9994fc9560cce4110cca752a5fae4",
-  "dest": "bun_cache/@tybys/wasm-util@0.10.4@@@1"
- },
- {
-  "type": "archive",
-  "url": "https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz",
-  "sha512": "a0916ef781d06fe29576e49440bef09e99aa9df98bb0e03f9c087a6fa107d30084a0ad3f98f79753a737c0a0d5f373243ae1cf447b525ca294f7d2016b34bfdb",
-  "dest": "bun_cache/tslib@2.8.1@@@1"
  }
 ]

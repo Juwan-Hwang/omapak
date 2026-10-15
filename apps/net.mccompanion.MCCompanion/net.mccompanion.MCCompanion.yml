@@ -48,30 +48,20 @@ modules:
           version-query: .tag_name | sub("^v"; "")
           url-query: .assets[] | select(.name == "MCCompanion-linux-x64.tar.gz") | .browser_download_url
           is-main-source: true
+      # Vendored rather than fetched from the app's `main` branch. These three
+      # are the submission's own packaging metadata, and pulling them live
+      # made the build depend on a branch omapak does not control — the same
+      # shape that took io.github.alinur1.LocalPDF_Studio down when its asset
+      # repo was deleted. Byte-for-byte the files the previous sha256s pinned,
+      # apart from the developer id in the metainfo (upstream's failed
+      # appstreamcli validation; see the note in that file).
+      #
+      # The payload archive above keeps its checker, so release bumps still
+      # land automatically — and now the metainfo they update is this one,
+      # instead of a copy that drifted four versions behind what was shipping.
       - type: file
-        url: https://raw.githubusercontent.com/MCCORG/MCCompanion/main/flatpak/net.mccompanion.MCCompanion.metainfo.xml
-        sha256: 1a2aa3520e1e057a40f582d9cf7604969570332ab3783b2ef418491516e5c272
-        dest-filename: net.mccompanion.MCCompanion.metainfo.xml
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/MCCORG/MCCompanion/releases/latest
-          version-query: .tag_name | sub("^v"; "")
-          url-query: '"https://raw.githubusercontent.com/MCCORG/MCCompanion/" + .tag_name + "/flatpak/net.mccompanion.MCCompanion.metainfo.xml"'
+        path: net.mccompanion.MCCompanion.metainfo.xml
       - type: file
-        url: https://raw.githubusercontent.com/MCCORG/MCCompanion/main/flatpak/net.mccompanion.MCCompanion.desktop
-        sha256: 73d5677e6a6171ae6bb1b878991ee51a76dda606bdb942f9a2d953ff3703a1c3
-        dest-filename: net.mccompanion.MCCompanion.desktop
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/MCCORG/MCCompanion/releases/latest
-          version-query: .tag_name | sub("^v"; "")
-          url-query: '"https://raw.githubusercontent.com/MCCORG/MCCompanion/" + .tag_name + "/flatpak/net.mccompanion.MCCompanion.desktop"'
+        path: net.mccompanion.MCCompanion.desktop
       - type: file
-        url: https://raw.githubusercontent.com/MCCORG/MCCompanion/main/flatpak/net.mccompanion.MCCompanion.png
-        sha256: 0b221eeab164210039031558fe854937d0fb7658699039f967de44358d5ee5f1
-        dest-filename: net.mccompanion.MCCompanion.png
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/MCCORG/MCCompanion/releases/latest
-          version-query: .tag_name | sub("^v"; "")
-          url-query: '"https://raw.githubusercontent.com/MCCORG/MCCompanion/" + .tag_name + "/flatpak/net.mccompanion.MCCompanion.png"'
+        path: net.mccompanion.MCCompanion.png

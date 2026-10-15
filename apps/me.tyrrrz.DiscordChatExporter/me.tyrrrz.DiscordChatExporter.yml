@@ -67,7 +67,11 @@ modules:
       - type: file
         path: me.tyrrrz.DiscordChatExporter.metainfo.xml
 
+      # The app icon, vendored next to the desktop entry and metainfo rather
+      # than fetched. The tag it was pinned to is immutable, but a tag only
+      # survives a branch moving — not the repository going away, which is
+      # how io.github.alinur1.LocalPDF_Studio's three assets were lost.
+      # Byte-for-byte the file the previous sha256 pinned.
       - type: file
-        url: https://raw.githubusercontent.com/Tyrrrz/DiscordChatExporter/2.47.1/favicon.png
-        sha256: 36ea0d21cf80c7e15779b1db7a241dadfa45a1a21890242df1a18a9290d96d8a
+        path: me.tyrrrz.DiscordChatExporter.png
         dest-filename: favicon.png

@@ -44,6 +44,24 @@ pub fn run(app_dir: &Path, source_dir: Option<&Path>) -> Result<StaticReport> {
                 detail: format!("unpinned upstream sources: {}", unpinned.join(", ")),
             });
         }
+        // The desktop entry, the appstream file and the icon are the
+        // submission's own; fetched from a URL they make the build depend on
+        // a repo omapak does not control. LocalPDF_Studio's asset repo was
+        // deleted and took every main build with it until they were vendored.
+        let remote_assets = omapak_core::remote_packaging_assets(m);
+        if !remote_assets.is_empty() {
+            let urls: Vec<&str> = remote_assets.iter().map(|(_, u)| u.as_str()).collect();
+            report.advisories.push(StaticAdvisory {
+                kind: "packaging-assets".into(),
+                detail: format!(
+                    "desktop entry, appstream metadata or icon fetched from a \
+                     repo omapak does not control — ship {} in the app \
+                     directory instead; a moved branch or a deleted repo \
+                     takes the build down with it",
+                    urls.join(", ")
+                ),
+            });
+        }
     }
 
     report.manifest = manifest;

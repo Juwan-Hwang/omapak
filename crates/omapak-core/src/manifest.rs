@@ -227,6 +227,48 @@ pub fn find_manifest(dir: &Path) -> Option<std::path::PathBuf> {
 }
 
 /// Finish args worth an advisory line in the report.
+/// Packaging metadata a submission ought to own: the desktop entry, the
+/// appstream file, the icon. Matched by suffix rather than by `type:`, since
+/// these arrive as `type: file` exactly like a payload does.
+const PACKAGING_ASSET_SUFFIXES: &[&str] = &[
+    ".desktop",
+    ".metainfo.xml",
+    ".appdata.xml",
+    ".png",
+    ".svg",
+    ".ico",
+];
+
+/// Packaging assets the manifest fetches from a URL instead of shipping in
+/// the app directory, as `(module, url)`.
+///
+/// Advisory, not a gate: fetching is legal and plenty of manifests in the
+/// wild do it. But it makes the build depend on a repository omapak does not
+/// control, and both ways that can fail have already happened here — a
+/// screenshot URL on `main` broke when the branch moved, and
+/// io.github.alinur1.LocalPDF_Studio's desktop entry, metainfo and icon all
+/// 404'd when the separate asset repo serving them was deleted, which stopped
+/// the build and reddened every main run until the files were vendored. An
+/// immutable tag survives a branch move but not a deletion, so this does not
+/// treat a pinned URL as safe.
+pub fn remote_packaging_assets(manifest: &ManifestInfo) -> Vec<(String, String)> {
+    manifest
+        .modules
+        .iter()
+        .flat_map(|modu| {
+            modu.sources.iter().filter_map(|s| {
+                let url = s.url.as_deref()?;
+                // Strip a query or fragment so `icon.png?raw=1` still matches.
+                let path = url.split(['?', '#']).next().unwrap_or(url).to_lowercase();
+                PACKAGING_ASSET_SUFFIXES
+                    .iter()
+                    .any(|suffix| path.ends_with(suffix))
+                    .then(|| (modu.name.clone(), url.to_string()))
+            })
+        })
+        .collect()
+}
+
 pub fn risky_finish_args(manifest: &ManifestInfo) -> Vec<&'static str> {
     RISKY_FINISH_ARGS
         .iter()
@@ -268,6 +310,62 @@ modules:
             Some("v1.2.0")
         );
         assert_eq!(risky_finish_args(&m), vec!["--device=all"]);
+    }
+
+    #[test]
+    fn flags_packaging_assets_fetched_from_a_remote_repo() {
+        // The shape that took every main build down: desktop entry, metainfo
+        // and icon pulled from a repo omapak does not control, alongside a
+        // payload and a local copy that are both fine.
+        let m = parse_manifest(
+            r#"
+app-id: io.example.App
+modules:
+  - name: app
+    sources:
+      - type: archive
+        url: https://github.com/example/app/releases/download/v1/app-1.tar.gz
+        sha256: deadbeef
+      - type: file
+        url: https://raw.githubusercontent.com/someone/assets/main/io.example.App.desktop
+      - type: file
+        url: https://raw.githubusercontent.com/someone/assets/v1.0.0/io.example.App.metainfo.xml
+      - type: file
+        url: https://raw.githubusercontent.com/someone/assets/main/icon.png?raw=1
+      - type: file
+        path: io.example.App.svg
+"#,
+        )
+        .unwrap();
+        let flagged = remote_packaging_assets(&m);
+        let names: Vec<String> = flagged
+            .iter()
+            .map(|(_, u)| u.rsplit('/').next().unwrap_or(u).to_string())
+            .collect();
+        assert_eq!(
+            names,
+            [
+                "io.example.App.desktop",
+                "io.example.App.metainfo.xml",
+                "icon.png?raw=1",
+            ]
+        );
+        assert!(flagged.iter().all(|(module, _)| module == "app"));
+        // A pinned tag is not a pass: a deleted repo 404s every ref.
+        assert!(remote_packaging_assets(&m)
+            .iter()
+            .any(|(_, u)| u.contains("/v1.0.0/")));
+        // The payload archive and the vendored svg are not packaging assets
+        // fetched from elsewhere.
+        assert!(!remote_packaging_assets(&m)
+            .iter()
+            .any(|(_, u)| u.ends_with(".tar.gz") || u.ends_with(".svg")));
+    }
+
+    #[test]
+    fn clean_manifest_has_no_packaging_asset_advisory() {
+        let m = parse_manifest(SAMPLE_YAML).unwrap();
+        assert!(remote_packaging_assets(&m).is_empty());
     }
 
     #[test]

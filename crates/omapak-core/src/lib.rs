@@ -8,7 +8,10 @@ mod markdown;
 mod metadata;
 mod schema;
 
-pub use manifest::{find_manifest, parse_manifest, risky_finish_args, ManifestInfo, ModuleInfo, SourceRef};
+pub use manifest::{
+    find_manifest, parse_manifest, remote_packaging_assets, risky_finish_args, ManifestInfo,
+    ModuleInfo, SourceRef,
+};
 pub use markdown::render_markdown;
 pub use metadata::{load_from_dir as load_metadata, Metadata, SourceAccess};
 pub use schema::{

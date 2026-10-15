@@ -1,30 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Upstream's flatpak/net.mccompanion.MCCompanion.metainfo.xml, vendored here.
+     One change: developer id, which upstream sets to the app id
+     (net.mccompanion.MCCompanion) and appstreamcli rejects as
+     developer-id-invalid. It is the developer's domain, not the app's. -->
 <component type="desktop-application">
   <id>net.mccompanion.MCCompanion</id>
-  <metadata_license>CC0-1.0</metadata_license>
-  <project_license>MIT</project_license>
   <name>MCCompanion</name>
-  <summary>The Minecraft companion app</summary>
-  <description>
-    <p>
-      MCCompanion lets you connect to external Minecraft servers from
-      PlayStation, Xbox, Nintendo Switch and other consoles, bridging
-      any server to your local network so consoles can join as if it
-      were a LAN game.
-    </p>
-    <p>
-      It also packs tools for skins, player lookup, server tracking and
-      a built-in wiki.
-    </p>
-  </description>
+  <summary>A Minecraft companion app</summary>
   <developer id="net.mccompanion">
     <name>MCCORG</name>
   </developer>
+  <metadata_license>MIT</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <description>
+    <p>
+      MCCompanion is a feature-rich Minecraft companion application.
+      Ping and monitor your servers, browse the wiki, manage skins, and more.
+    </p>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/MCCORG/MCCompanion/main/assets/linux-screenshots/mccompanion-home.png</image>
+      <caption>Home dashboard</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/MCCORG/MCCompanion/main/assets/linux-screenshots/mccompanion-connector.png</image>
+      <caption>Server connector</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/MCCORG/MCCompanion/main/assets/linux-screenshots/mccompanion-partners.png</image>
+      <caption>Partners overview</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/MCCORG/MCCompanion/main/assets/linux-screenshots/mccompanion-servertracker.png</image>
+      <caption>Server tracker</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/MCCORG/MCCompanion/main/assets/linux-screenshots/mccompanion-lookup.png</image>
+      <caption>Player and server lookup</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/MCCORG/MCCompanion/main/assets/linux-screenshots/mccompanion-skins.png</image>
+      <caption>Skin viewer and manager</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/MCCORG/MCCompanion/main/assets/linux-screenshots/mccompanion-wiki.png</image>
+      <caption>Minecraft wiki browser</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/MCCORG/MCCompanion/main/assets/linux-screenshots/mccompanion-profile.png</image>
+      <caption>User profile settings</caption>
+    </screenshot>
+  </screenshots>
   <launchable type="desktop-id">net.mccompanion.MCCompanion.desktop</launchable>
   <url type="homepage">https://github.com/MCCORG/MCCompanion</url>
   <url type="bugtracker">https://github.com/MCCORG/MCCompanion/issues</url>
   <content_rating type="oars-1.1"/>
   <releases>
-    <release version="3.4.2" date="2026-09-16"/>
+    <release version="4.1.9" date="2026-08-17">
+      <description><p>See GitHub releases for the full changelog.</p></description>
+    </release>
+    <release version="4.1.8" date="2026-08-16">
+      <description><p>See GitHub releases for the full changelog.</p></description>
+    </release>
+    <release version="4.1.7" date="2026-01-01">
+      <description><p>See GitHub releases for the full changelog.</p></description>
+    </release>
   </releases>
 </component>

@@ -248,7 +248,7 @@ const PACKAGING_ASSET_SUFFIXES: &[&str] = &[
 /// screenshot URL on `main` broke when the branch moved, and
 /// io.github.alinur1.LocalPDF_Studio's desktop entry, metainfo and icon all
 /// 404'd when the separate asset repo serving them was deleted, which stopped
-/// the build and reddened every main run until the files were vendored. An
+/// the build and reddened every main run until the app was removed. An
 /// immutable tag survives a branch move but not a deletion, so this does not
 /// treat a pinned URL as safe.
 pub fn remote_packaging_assets(manifest: &ManifestInfo) -> Vec<(String, String)> {

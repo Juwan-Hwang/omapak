@@ -591,37 +591,6 @@
       "report_available": false
     },
     {
-      "app_id": "io.github.alinur1.LocalPDF_Studio",
-      "name": "LocalPDF Studio",
-      "icon": "https://repo.omapak.org/icons/io.github.alinur1.LocalPDF_Studio.png",
-      "developer": "Alinur1",
-      "description": [
-        "LocalPDF Studio is a complete offline PDF toolkit: no internet, no\n      uploads, no compromise. Merge, split, rotate, compress and convert\n      documents, all processed locally on your machine."
-      ],
-      "urls": {
-        "homepage": "https://github.com/Alinur1/LocalPDF_Studio",
-        "bugtracker": "https://github.com/Alinur1/LocalPDF_Studio/issues"
-      },
-      "bugtracker": "https://github.com/Alinur1/LocalPDF_Studio/issues",
-      "help": null,
-      "screenshots": [
-        "https://raw.githubusercontent.com/Alinur1/LocalPDF_Studio/main/Screenshots/LPS2.png"
-      ],
-      "summary": "Your complete offline PDF toolkit",
-      "submitter": "jon",
-      "source_repo": "https://github.com/Alinur1/LocalPDF_Studio",
-      "license": "AGPL-3.0",
-      "homepage": "https://github.com/Alinur1/LocalPDF_Studio",
-      "tags": [
-        "office",
-        "utility"
-      ],
-      "source_access": "public",
-      "verdict": "published",
-      "certified": false,
-      "report_available": false
-    },
-    {
       "app_id": "io.github.brdweb.MaTui",
       "name": "MA-TUI",
       "icon": "https://repo.omapak.org/icons/io.github.brdweb.MaTui.png",

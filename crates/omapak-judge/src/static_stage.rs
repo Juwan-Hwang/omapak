@@ -47,7 +47,7 @@ pub fn run(app_dir: &Path, source_dir: Option<&Path>) -> Result<StaticReport> {
         // The desktop entry, the appstream file and the icon are the
         // submission's own; fetched from a URL they make the build depend on
         // a repo omapak does not control. LocalPDF_Studio's asset repo was
-        // deleted and took every main build with it until they were vendored.
+        // deleted and took every main build with it until the app was removed.
         let remote_assets = omapak_core::remote_packaging_assets(m);
         if !remote_assets.is_empty() {
             let urls: Vec<&str> = remote_assets.iter().map(|(_, u)| u.as_str()).collect();

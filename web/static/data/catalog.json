@@ -960,51 +960,6 @@
       "report_available": false
     },
     {
-      "app_id": "io.github.unTanana.oma-audio-books",
-      "name": "Oma Audiobooks",
-      "icon": "https://repo.omapak.org/icons/io.github.unTanana.oma-audio-books.png",
-      "developer": "unTanana",
-      "description": [
-        "A native audiobook library and player for Linux, built with Qt Quick.\n    Add your own DRM-free MP3 book folders or M4B files, browse by series,\n    and continue listening where you left off.",
-        [
-          "Saved listening progress, bookmarks, favorites and completion status",
-          "Series grouping, search, library filters and editable book details",
-          "Chapter navigation and timeline previews, playback speed and sleep timer",
-          "Keyboard shortcuts and desktop media controls",
-          "Omarchy theme integration and built-in dark and light appearances"
-        ],
-        "No account, server, telemetry or network connection is required. Audio\n    files remain unchanged. Books are not included; this app does not download\n    Audible books or remove DRM."
-      ],
-      "urls": {
-        "homepage": "https://github.com/unTanana/oma-audio-books",
-        "bugtracker": "https://github.com/unTanana/oma-audio-books/issues",
-        "vcs-browser": "https://github.com/unTanana/oma-audio-books"
-      },
-      "bugtracker": "https://github.com/unTanana/oma-audio-books/issues",
-      "help": null,
-      "screenshots": [
-        "https://raw.githubusercontent.com/unTanana/oma-audio-books/68da5d5a354e4cc766a3b8b09b9cc196bf111347/docs/screenshots/library.png",
-        "https://raw.githubusercontent.com/unTanana/oma-audio-books/68da5d5a354e4cc766a3b8b09b9cc196bf111347/docs/screenshots/details.png",
-        "https://raw.githubusercontent.com/unTanana/oma-audio-books/68da5d5a354e4cc766a3b8b09b9cc196bf111347/docs/screenshots/light-library.png"
-      ],
-      "summary": "Listen to local audiobooks and keep your place",
-      "submitter": "unTanana",
-      "source_repo": "https://github.com/unTanana/oma-audio-books",
-      "license": "MIT",
-      "homepage": "https://github.com/unTanana/oma-audio-books",
-      "tags": [
-        "audio",
-        "audiobooks",
-        "player",
-        "qt",
-        "omarchy"
-      ],
-      "source_access": "public",
-      "verdict": "published",
-      "certified": false,
-      "report_available": false
-    },
-    {
       "app_id": "io.github.wusel1007.clamav-gui",
       "name": "ClamAV-GUI",
       "icon": "https://repo.omapak.org/icons/io.github.wusel1007.clamav-gui.png",
